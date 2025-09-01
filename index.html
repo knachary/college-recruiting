@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atmik Acharya - Midfielder/Winger | Class of 2026</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 0.5in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            font-size: 11pt;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 7.5in;
+            margin: 0 auto;
+            background: white;
+            min-height: 10in;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 20pt 0;
+            border-bottom: 3pt solid #2c3e50;
+            margin-bottom: 20pt;
+            background: white;
+        }
+        
+        .photo-container {
+            width: 120pt;
+            height: 120pt;
+            border-radius: 50%;
+            margin: 0 auto 15pt;
+            border: 3pt solid #ddd;
+            overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2pt 8pt rgba(0,0,0,0.1);
+        }
+        
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1976d2;
+            font-size: 14pt;
+            font-weight: bold;
+            letter-spacing: 1pt;
+        }
+        
+        .name {
+            font-size: 28pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 8pt;
+            letter-spacing: 2pt;
+            text-transform: uppercase;
+        }
+        
+        .title {
+            font-size: 16pt;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 15pt;
+            letter-spacing: 0.5pt;
+        }
+        
+        .contact-info {
+            font-size: 11pt;
+            color: #555;
+            line-height: 1.3;
+        }
+        
+        .contact-item {
+            display: inline-block;
+            margin: 0 20pt;
+            white-space: nowrap;
+        }
+        
+        .resume-content {
+            display: flex;
+            gap: 20pt;
+        }
+        
+        .left-column {
+            flex: 0 0 35%;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 20pt 18pt;
+            border-radius: 8pt;
+            border: 1pt solid #dee2e6;
+        }
+        
+        .right-column {
+            flex: 1;
+            padding: 0 15pt;
+        }
+        
+        .section-title {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12pt;
+            margin-top: 18pt;
+            text-transform: uppercase;
+            letter-spacing: 1pt;
+            position: relative;
+            padding-bottom: 6pt;
+        }
+        
+        .section-title:first-child {
+            margin-top: 0;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 30pt;
+            height: 2pt;
+            background: #3498db;
+        }
+        
+        .left-content {
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #444;
+        }
+        
+        .position-list {
+            margin-bottom: 15pt;
+        }
+        
+        .position-item {
+            background: white;
+            padding: 8pt 12pt;
+            margin-bottom: 6pt;
+            border-radius: 20pt;
+            font-size: 10pt;
+            text-align: center;
+            border: 1pt solid #3498db;
+            color: #2c3e50;
+            font-weight: 600;
+            box-shadow: 0 1pt 3pt rgba(0,0,0,0.1);
+        }
+        
+        .team-info {
+            margin-bottom: 18pt;
+            background: white;
+            padding: 12pt;
+            border-radius: 6pt;
+            border: 1pt solid #dee2e6;
+            box-shadow: 0 1pt 3pt rgba(0,0,0,0.05);
+        }
+        
+        .team-name {
+            font-weight: bold;
+            margin-bottom: 5pt;
+            color: #2c3e50;
+            font-size: 11pt;
+        }
+        
+        .team-details {
+            margin-bottom: 8pt;
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        .coach-info {
+            font-size: 9pt;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .right-section {
+            margin-bottom: 25pt;
+        }
+        
+        .right-section-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15pt;
+            position: relative;
+            padding-bottom: 8pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+        }
+        
+        .right-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50pt;
+            height: 3pt;
+            background: linear-gradient(90deg, #3498db, #2c3e50);
+        }
+        
+        .personal-statement {
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #444;
+            text-align: justify;
+            margin-bottom: 15pt;
+            padding: 15pt;
+            background: #f8f9fa;
+            border-left: 4pt solid #3498db;
+            border-radius: 0 6pt 6pt 0;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10pt;
+            margin-bottom: 15pt;
+        }
+        
+        .info-item {
+            background: white;
+            padding: 10pt 12pt;
+            border: 1pt solid #dee2e6;
+            border-radius: 6pt;
+            box-shadow: 0 1pt 3pt rgba(0,0,0,0.05);
+        }
+        
+        .info-item.full-width {
+            grid-column: span 2;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 10pt;
+            margin-bottom: 4pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+        }
+        
+        .info-value {
+            color: #555;
+            font-size: 10pt;
+            line-height: 1.3;
+        }
+        
+        .highlight-links {
+            display: grid;
+            gap: 10pt;
+            margin-bottom: 15pt;
+        }
+        
+        .highlight-link {
+            background: white;
+            padding: 12pt 15pt;
+            border-radius: 6pt;
+            border-left: 4pt solid #3498db;
+            border: 1pt solid #dee2e6;
+            box-shadow: 0 1pt 3pt rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .link-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5pt;
+            font-size: 10pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+        }
+        
+        .link-url {
+            color: #3498db;
+            font-size: 9pt;
+            font-family: 'Courier New', monospace;
+            word-wrap: break-word;
+            line-height: 1.3;
+        }
+        
+        .link-url a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+        
+        .reference-card {
+            background: white;
+            padding: 18pt;
+            border-radius: 8pt;
+            border: 1pt solid #dee2e6;
+            box-shadow: 0 2pt 6pt rgba(0,0,0,0.08);
+        }
+        
+        .reference-name {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 6pt;
+            font-size: 12pt;
+            text-transform: uppercase;
+            letter-spacing: 0.5pt;
+        }
+        
+        .reference-title {
+            color: #666;
+            margin-bottom: 10pt;
+            font-size: 10pt;
+            font-style: italic;
+        }
+        
+        .reference-contact {
+            font-size: 10pt;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        /* PDF Print Optimizations */
+        @media print {
+            body {
+                font-size: 10pt;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            .container {
+                max-width: none;
+                width: 100%;
+            }
+            
+            .resume-content {
+                page-break-inside: avoid;
+            }
+            
+            .right-section {
+                break-inside: avoid;
+            }
+            
+            .highlight-link,
+            .info-item,
+            .team-info {
+                break-inside: avoid;
+            }
+        }
+        
+        /* Ensure colors print correctly */
+        .left-column,
+        .position-item,
+        .team-info,
+        .info-item,
+        .highlight-link,
+        .reference-card,
+        .personal-statement {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <div class="photo-container">
+                <div class="photo-placeholder">
+                    <img src="/Users/kacharya/Documents/Atmik/Bayern/Files/Atmik Acharya 5.jpg" alt="Atmik Acharya" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                </div>
+            </div>
+            <h1 class="name">Atmik Acharya</h1>
+            <div class="title">Midfielder/Winger | Class of 2026</div>
+            <div class="contact-info">
+                <div class="contact-item">📍 Atlanta, Georgia</div>
+                <div class="contact-item">📞 470-281-7461</div>
+                <div class="contact-item">✉️ <a href="mailto:atmik.d.acharya@gmail.com">atmik.d.acharya@gmail.com</a></div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="resume-content">
+            <!-- Left Column -->
+            <div class="left-column">
+                <h3 class="section-title">Playing Positions</h3>
+                <div class="position-list">
+                    <div class="position-item">Right Back</div>
+                    <div class="position-item">Winger</div>
+                    <div class="position-item">Attacking Midfielder</div>
+                </div>
+                
+                <h3 class="section-title">Current Team</h3>
+                <div class="team-info">
+                    <div class="team-name">Kalonji Soccer Academy</div>
+                    <div class="team-details">U19 MLS Next • Jersey #42</div>
+                    <div class="coach-info">
+                        <strong>Coach:</strong> Bruno Kalonji<br>
+                        📞 (678) 789-2961<br>
+                        ✉️ <a href="mailto:bruno@kalonjisoccer.com">bruno@kalonjisoccer.com</a>
+                    </div>
+                </div>
+                
+                <h3 class="section-title">Previous Experience</h3>
+                <div class="team-info">
+                    <div class="team-name">FC Bayern München</div>
+                    <div class="team-details">Global Academy U17</div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="right-section">
+                    <h2 class="right-section-title">Personal Statement</h2>
+                    <p class="personal-statement">
+                        I have been playing football my entire life and love the game more than anything. Any attribute I may lack physically, I make up for with my work ethic and passion. At 15, I left home to live in Germany and train with FC Bayern Munich, which taught me the discipline, sacrifice, and resilience needed to succeed in sports. I aim to make an impact in college soccer and ultimately achieve my dream of playing professionally.
+                    </p>
+                </div>
+                
+                <div class="right-section">
+                    <h2 class="right-section-title">Academic Information</h2>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">High School</div>
+                            <div class="info-value">West Forsyth High School</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Graduation</div>
+                            <div class="info-value">Class of 2026</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">GPA</div>
+                            <div class="info-value">4.375 (Weighted)<br>4.0 (Unweighted)</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Class Rank</div>
+                            <div class="info-value">Top 5%<br>(32 of 587)</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Test Score</div>
+                            <div class="info-value">ACT 30</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Intended Major</div>
+                            <div class="info-value">Business/Marketing</div>
+                        </div>
+                        <div class="info-item full-width">
+                            <div class="info-label">Advanced Coursework</div>
+                            <div class="info-value">10 AP courses, 3 Dual Enrollment courses at Georgia State University</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-section">
+                    <h2 class="right-section-title">Highlight Videos & Profiles</h2>
+                    <div class="highlight-links">
+                        <div class="highlight-link">
+                            <div class="link-title">YouTube Highlight Video #1</div>
+                            <div class="link-url"><a href="https://youtu.be/EuPHvH_6V_Q?feature=shared" target="_blank">https://youtu.be/EuPHvH_6V_Q</a></div>
+                        </div>
+                        <div class="highlight-link">
+                            <div class="link-title">YouTube Highlight Video #2</div>
+                            <div class="link-url"><a href="https://youtu.be/63IHb_wXdkU?feature=shared" target="_blank">https://youtu.be/63IHb_wXdkU</a></div>
+                        </div>
+                        <div class="highlight-link">
+                            <div class="link-title">Takaio Athletic Profile</div>
+                            <div class="link-url"><a href="https://taka.io/athlete/66e6f931f8f65efd8d7d764b" target="_blank">https://taka.io/athlete/66e6f931f8f65efd8d7d764b</a></div>
+                        </div>
+                        <div class="highlight-link">
+                            <div class="link-title">SkillFit Sports Profile</div>
+                            <div class="link-url"><a href="https://skillfitsports.app/general/profile/atmik10" target="_blank">https://skillfitsports.app/general/profile/atmik10</a></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-section">
+                    <h2 class="right-section-title">References</h2>
+                    <div class="reference-card">
+                        <div class="reference-name">Bruno Kalonji</div>
+                        <div class="reference-title">Head Coach - Kalonji Soccer Academy</div>
+                        <div class="reference-contact">
+                            📞 (678) 789-2961<br>
+                            ✉️ bruno@kalonjisoccer.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
